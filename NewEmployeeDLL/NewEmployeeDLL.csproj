@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9141AAA6-D894-473E-9ECF-4F5A3FF39E4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewEmployeeDLL</RootNamespace>
+    <AssemblyName>NewEmployeeDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboEmployeeDataSet.cs">
+      <DependentUpon>ComboEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComboEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeactivateEmployeeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeactivateEmployeeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeClass.cs" />
+    <Compile Include="EmployeeGroupDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeGroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveNonExemptEmployeesByPayDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveNonExemptEmployeesByPayDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveNonExemptEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllActiveEmployeeInformationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllActiveEmployeeInformationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllActiveNonExemptEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAllEmployeesByLastNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAllEmployeesByLastNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDeactivatedEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDeactivatedEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDesignEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDesignEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeByDepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByDepartmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeByLastNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByLastNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeByPayIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByPayIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeEmailAddressDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeEmailAddressDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeGroupByGroupIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeGroupByGroupIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeGroupByGroupNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeGroupByGroupNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeesByGroupDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeesByGroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindPartsWarehousesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPartsWarehousesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedEmployeeGroupDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedEmployeeGroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedEmployeeManagersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWarehousesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWarehousesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertEmployeeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertEmployeeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertEmployeeGroup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertEmployeeGroup.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeEmailAddressEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeeEmailAddressEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeEndDateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeeEndDateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeePayInformationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeePayInformationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeStartDateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeeStartDateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyDesignEmployeeLogonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerifyDesignEmployeeLogonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerifyEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyLogonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerifyLogonDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ComboEmployeeDataSet.xsc">
+      <DependentUpon>ComboEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ComboEmployeeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComboEmployeeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ComboEmployeeDataSet.xss">
+      <DependentUpon>ComboEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DeactivateEmployeeEntry.xsc">
+      <DependentUpon>DeactivateEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="DeactivateEmployeeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeactivateEmployeeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DeactivateEmployeeEntry.xss">
+      <DependentUpon>DeactivateEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeGroupDataSet.xsc">
+      <DependentUpon>EmployeeGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeGroupDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeGroupDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmployeeGroupDataSet.xss">
+      <DependentUpon>EmployeeGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeIDDataSet.xsc">
+      <DependentUpon>EmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmployeeIDDataSet.xss">
+      <DependentUpon>EmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeesDataSet.xsc">
+      <DependentUpon>EmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmployeesDataSet.xss">
+      <DependentUpon>EmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveEmployeesDataSet.xsc">
+      <DependentUpon>FindActiveEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveEmployeesDataSet.xss">
+      <DependentUpon>FindActiveEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesByPayDateDataSet.xsc">
+      <DependentUpon>FindActiveNonExemptEmployeesByPayDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesByPayDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveNonExemptEmployeesByPayDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesByPayDateDataSet.xss">
+      <DependentUpon>FindActiveNonExemptEmployeesByPayDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesDataSet.xsc">
+      <DependentUpon>FindActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveNonExemptEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveNonExemptEmployeesDataSet.xss">
+      <DependentUpon>FindActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllActiveEmployeeInformationDataSet.xsc">
+      <DependentUpon>FindAllActiveEmployeeInformationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllActiveEmployeeInformationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllActiveEmployeeInformationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllActiveEmployeeInformationDataSet.xss">
+      <DependentUpon>FindAllActiveEmployeeInformationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllActiveNonExemptEmployeesDataSet.xsc">
+      <DependentUpon>FindAllActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllActiveNonExemptEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllActiveNonExemptEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllActiveNonExemptEmployeesDataSet.xss">
+      <DependentUpon>FindAllActiveNonExemptEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllEmployeesByLastNameDataSet.xsc">
+      <DependentUpon>FindAllEmployeesByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAllEmployeesByLastNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAllEmployeesByLastNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAllEmployeesByLastNameDataSet.xss">
+      <DependentUpon>FindAllEmployeesByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDeactivatedEmployeesDataSet.xsc">
+      <DependentUpon>FindDeactivatedEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDeactivatedEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDeactivatedEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDeactivatedEmployeesDataSet.xss">
+      <DependentUpon>FindDeactivatedEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDesignEmployeesDataSet.xsc">
+      <DependentUpon>FindDesignEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDesignEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDesignEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDesignEmployeesDataSet.xss">
+      <DependentUpon>FindDesignEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByDepartmentDataSet.xsc">
+      <DependentUpon>FindEmployeeByDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByDepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByDepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByDepartmentDataSet.xss">
+      <DependentUpon>FindEmployeeByDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindEmployeeByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByEmployeeIDDataSet.xss">
+      <DependentUpon>FindEmployeeByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByLastNameDataSet.xsc">
+      <DependentUpon>FindEmployeeByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByLastNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByLastNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByLastNameDataSet.xss">
+      <DependentUpon>FindEmployeeByLastNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByPayIDDataSet.xsc">
+      <DependentUpon>FindEmployeeByPayIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByPayIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByPayIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByPayIDDataSet.xss">
+      <DependentUpon>FindEmployeeByPayIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeEmailAddressDataSet.xsc">
+      <DependentUpon>FindEmployeeEmailAddressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeEmailAddressDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeEmailAddressDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeEmailAddressDataSet.xss">
+      <DependentUpon>FindEmployeeEmailAddressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeGroupByGroupIDDataSet.xsc">
+      <DependentUpon>FindEmployeeGroupByGroupIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeGroupByGroupIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeGroupByGroupIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeGroupByGroupIDDataSet.xss">
+      <DependentUpon>FindEmployeeGroupByGroupIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeGroupByGroupNameDataSet.xsc">
+      <DependentUpon>FindEmployeeGroupByGroupNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeGroupByGroupNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeGroupByGroupNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeGroupByGroupNameDataSet.xss">
+      <DependentUpon>FindEmployeeGroupByGroupNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeesByGroupDataSet.xsc">
+      <DependentUpon>FindEmployeesByGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeesByGroupDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeesByGroupDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeesByGroupDataSet.xss">
+      <DependentUpon>FindEmployeesByGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPartsWarehousesDataSet.xsc">
+      <DependentUpon>FindPartsWarehousesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPartsWarehousesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPartsWarehousesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPartsWarehousesDataSet.xss">
+      <DependentUpon>FindPartsWarehousesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedEmployeeGroupDataSet.xsc">
+      <DependentUpon>FindSortedEmployeeGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedEmployeeGroupDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedEmployeeGroupDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedEmployeeGroupDataSet.xss">
+      <DependentUpon>FindSortedEmployeeGroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedEmployeeManagersDataSet.xsc">
+      <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedEmployeeManagersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedEmployeeManagersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedEmployeeManagersDataSet.xss">
+      <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWarehousesDataSet.xsc">
+      <DependentUpon>FindWarehousesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWarehousesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWarehousesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWarehousesDataSet.xss">
+      <DependentUpon>FindWarehousesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEmployeeEntry.xsc">
+      <DependentUpon>InsertEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEmployeeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertEmployeeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertEmployeeEntry.xss">
+      <DependentUpon>InsertEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEmployeeGroup.xsc">
+      <DependentUpon>InsertEmployeeGroup.xsd</DependentUpon>
+    </None>
+    <None Include="InsertEmployeeGroup.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertEmployeeGroup.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertEmployeeGroup.xss">
+      <DependentUpon>InsertEmployeeGroup.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateEmployeeEmailAddressEntry.xsc">
+      <DependentUpon>UpdateEmployeeEmailAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeEmailAddressEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeeEmailAddressEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeeEmailAddressEntry.xss">
+      <DependentUpon>UpdateEmployeeEmailAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeEndDateEntry.xsc">
+      <DependentUpon>UpdateEmployeeEndDateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeEndDateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeeEndDateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeeEndDateEntry.xss">
+      <DependentUpon>UpdateEmployeeEndDateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeEntry.xsc">
+      <DependentUpon>UpdateEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeeEntry.xss">
+      <DependentUpon>UpdateEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeePayInformationEntry.xsc">
+      <DependentUpon>UpdateEmployeePayInformationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeePayInformationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeePayInformationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeePayInformationEntry.xss">
+      <DependentUpon>UpdateEmployeePayInformationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeStartDateEntry.xsc">
+      <DependentUpon>UpdateEmployeeStartDateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateEmployeeStartDateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateEmployeeStartDateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateEmployeeStartDateEntry.xss">
+      <DependentUpon>UpdateEmployeeStartDateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyDesignEmployeeLogonDataSet.xsc">
+      <DependentUpon>VerifyDesignEmployeeLogonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyDesignEmployeeLogonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerifyDesignEmployeeLogonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VerifyDesignEmployeeLogonDataSet.xss">
+      <DependentUpon>VerifyDesignEmployeeLogonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyEmployeeDataSet.xsc">
+      <DependentUpon>VerifyEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerifyEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VerifyEmployeeDataSet.xss">
+      <DependentUpon>VerifyEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyLogonDataSet.xsc">
+      <DependentUpon>VerifyLogonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VerifyLogonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VerifyLogonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VerifyLogonDataSet.xss">
+      <DependentUpon>VerifyLogonDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
