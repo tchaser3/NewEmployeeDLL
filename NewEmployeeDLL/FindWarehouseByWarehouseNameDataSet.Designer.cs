@@ -20,17 +20,17 @@ namespace NewEmployeeDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindActiveEmployeesDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindWarehouseByWarehouseNameDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindActiveEmployeesDataSet : global::System.Data.DataSet {
+    public partial class FindWarehouseByWarehouseNameDataSet : global::System.Data.DataSet {
         
-        private FindActiveEmployeesDataTable tableFindActiveEmployees;
+        private FindWarehouseByWarehouseNameDataTable tableFindWarehouseByWarehouseName;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindActiveEmployeesDataSet() {
+        public FindWarehouseByWarehouseNameDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace NewEmployeeDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindActiveEmployeesDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindWarehouseByWarehouseNameDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace NewEmployeeDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindActiveEmployees"] != null)) {
-                    base.Tables.Add(new FindActiveEmployeesDataTable(ds.Tables["FindActiveEmployees"]));
+                if ((ds.Tables["FindWarehouseByWarehouseName"] != null)) {
+                    base.Tables.Add(new FindWarehouseByWarehouseNameDataTable(ds.Tables["FindWarehouseByWarehouseName"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace NewEmployeeDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindActiveEmployeesDataTable FindActiveEmployees {
+        public FindWarehouseByWarehouseNameDataTable FindWarehouseByWarehouseName {
             get {
-                return this.tableFindActiveEmployees;
+                return this.tableFindWarehouseByWarehouseName;
             }
         }
         
@@ -127,7 +127,7 @@ namespace NewEmployeeDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindActiveEmployeesDataSet cln = ((FindActiveEmployeesDataSet)(base.Clone()));
+            FindWarehouseByWarehouseNameDataSet cln = ((FindWarehouseByWarehouseNameDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace NewEmployeeDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindActiveEmployees"] != null)) {
-                    base.Tables.Add(new FindActiveEmployeesDataTable(ds.Tables["FindActiveEmployees"]));
+                if ((ds.Tables["FindWarehouseByWarehouseName"] != null)) {
+                    base.Tables.Add(new FindWarehouseByWarehouseNameDataTable(ds.Tables["FindWarehouseByWarehouseName"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace NewEmployeeDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindActiveEmployees = ((FindActiveEmployeesDataTable)(base.Tables["FindActiveEmployees"]));
+            this.tableFindWarehouseByWarehouseName = ((FindWarehouseByWarehouseNameDataTable)(base.Tables["FindWarehouseByWarehouseName"]));
             if ((initTable == true)) {
-                if ((this.tableFindActiveEmployees != null)) {
-                    this.tableFindActiveEmployees.InitVars();
+                if ((this.tableFindWarehouseByWarehouseName != null)) {
+                    this.tableFindWarehouseByWarehouseName.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace NewEmployeeDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindActiveEmployeesDataSet";
+            this.DataSetName = "FindWarehouseByWarehouseNameDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindActiveEmployeesDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindWarehouseByWarehouseNameDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindActiveEmployees = new FindActiveEmployeesDataTable();
-            base.Tables.Add(this.tableFindActiveEmployees);
+            this.tableFindWarehouseByWarehouseName = new FindWarehouseByWarehouseNameDataTable();
+            base.Tables.Add(this.tableFindWarehouseByWarehouseName);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindActiveEmployees() {
+        private bool ShouldSerializeFindWarehouseByWarehouseName() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace NewEmployeeDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindActiveEmployeesDataSet ds = new FindActiveEmployeesDataSet();
+            FindWarehouseByWarehouseNameDataSet ds = new FindWarehouseByWarehouseNameDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace NewEmployeeDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindActiveEmployeesRowChangeEventHandler(object sender, FindActiveEmployeesRowChangeEvent e);
+        public delegate void FindWarehouseByWarehouseNameRowChangeEventHandler(object sender, FindWarehouseByWarehouseNameRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindActiveEmployeesDataTable : global::System.Data.TypedTableBase<FindActiveEmployeesRow> {
+        public partial class FindWarehouseByWarehouseNameDataTable : global::System.Data.TypedTableBase<FindWarehouseByWarehouseNameRow> {
             
             private global::System.Data.DataColumn columnEmployeeID;
             
@@ -287,18 +287,32 @@ namespace NewEmployeeDLL {
             
             private global::System.Data.DataColumn columnPhoneNumber;
             
+            private global::System.Data.DataColumn columnActive;
+            
+            private global::System.Data.DataColumn columnEmployeeGroup;
+            
             private global::System.Data.DataColumn columnHomeOffice;
             
+            private global::System.Data.DataColumn columnEmployeeType;
+            
             private global::System.Data.DataColumn columnEmailAddress;
+            
+            private global::System.Data.DataColumn columnSalaryType;
             
             private global::System.Data.DataColumn columnDepartment;
             
             private global::System.Data.DataColumn columnManagerID;
             
+            private global::System.Data.DataColumn columnPayID;
+            
+            private global::System.Data.DataColumn columnStartDate;
+            
+            private global::System.Data.DataColumn columnEndDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesDataTable() {
-                this.TableName = "FindActiveEmployees";
+            public FindWarehouseByWarehouseNameDataTable() {
+                this.TableName = "FindWarehouseByWarehouseName";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +320,7 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindActiveEmployeesDataTable(global::System.Data.DataTable table) {
+            internal FindWarehouseByWarehouseNameDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +337,7 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindActiveEmployeesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindWarehouseByWarehouseNameDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -362,6 +376,22 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActiveColumn {
+                get {
+                    return this.columnActive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeGroupColumn {
+                get {
+                    return this.columnEmployeeGroup;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn HomeOfficeColumn {
                 get {
                     return this.columnHomeOffice;
@@ -370,9 +400,25 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeTypeColumn {
+                get {
+                    return this.columnEmployeeType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn EmailAddressColumn {
                 get {
                     return this.columnEmailAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SalaryTypeColumn {
+                get {
+                    return this.columnSalaryType;
                 }
             }
             
@@ -394,6 +440,30 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PayIDColumn {
+                get {
+                    return this.columnPayID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StartDateColumn {
+                get {
+                    return this.columnStartDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EndDateColumn {
+                get {
+                    return this.columnEndDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,59 +473,66 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRow this[int index] {
+            public FindWarehouseByWarehouseNameRow this[int index] {
                 get {
-                    return ((FindActiveEmployeesRow)(this.Rows[index]));
+                    return ((FindWarehouseByWarehouseNameRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindActiveEmployeesRowChangeEventHandler FindActiveEmployeesRowChanging;
+            public event FindWarehouseByWarehouseNameRowChangeEventHandler FindWarehouseByWarehouseNameRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindActiveEmployeesRowChangeEventHandler FindActiveEmployeesRowChanged;
+            public event FindWarehouseByWarehouseNameRowChangeEventHandler FindWarehouseByWarehouseNameRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindActiveEmployeesRowChangeEventHandler FindActiveEmployeesRowDeleting;
+            public event FindWarehouseByWarehouseNameRowChangeEventHandler FindWarehouseByWarehouseNameRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindActiveEmployeesRowChangeEventHandler FindActiveEmployeesRowDeleted;
+            public event FindWarehouseByWarehouseNameRowChangeEventHandler FindWarehouseByWarehouseNameRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindActiveEmployeesRow(FindActiveEmployeesRow row) {
+            public void AddFindWarehouseByWarehouseNameRow(FindWarehouseByWarehouseNameRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRow AddFindActiveEmployeesRow(int EmployeeID, string FirstName, string LastName, string PhoneNumber, string HomeOffice, string EmailAddress, string Department, int ManagerID) {
-                FindActiveEmployeesRow rowFindActiveEmployeesRow = ((FindActiveEmployeesRow)(this.NewRow()));
+            public FindWarehouseByWarehouseNameRow AddFindWarehouseByWarehouseNameRow(int EmployeeID, string FirstName, string LastName, string PhoneNumber, bool Active, string EmployeeGroup, string HomeOffice, string EmployeeType, string EmailAddress, string SalaryType, string Department, int ManagerID, int PayID, System.DateTime StartDate, System.DateTime EndDate) {
+                FindWarehouseByWarehouseNameRow rowFindWarehouseByWarehouseNameRow = ((FindWarehouseByWarehouseNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeID,
                         FirstName,
                         LastName,
                         PhoneNumber,
+                        Active,
+                        EmployeeGroup,
                         HomeOffice,
+                        EmployeeType,
                         EmailAddress,
+                        SalaryType,
                         Department,
-                        ManagerID};
-                rowFindActiveEmployeesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindActiveEmployeesRow);
-                return rowFindActiveEmployeesRow;
+                        ManagerID,
+                        PayID,
+                        StartDate,
+                        EndDate};
+                rowFindWarehouseByWarehouseNameRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindWarehouseByWarehouseNameRow);
+                return rowFindWarehouseByWarehouseNameRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRow FindByEmployeeID(int EmployeeID) {
-                return ((FindActiveEmployeesRow)(this.Rows.Find(new object[] {
+            public FindWarehouseByWarehouseNameRow FindByEmployeeID(int EmployeeID) {
+                return ((FindWarehouseByWarehouseNameRow)(this.Rows.Find(new object[] {
                             EmployeeID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindActiveEmployeesDataTable cln = ((FindActiveEmployeesDataTable)(base.Clone()));
+                FindWarehouseByWarehouseNameDataTable cln = ((FindWarehouseByWarehouseNameDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +540,7 @@ namespace NewEmployeeDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindActiveEmployeesDataTable();
+                return new FindWarehouseByWarehouseNameDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -473,10 +550,17 @@ namespace NewEmployeeDLL {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
+                this.columnActive = base.Columns["Active"];
+                this.columnEmployeeGroup = base.Columns["EmployeeGroup"];
                 this.columnHomeOffice = base.Columns["HomeOffice"];
+                this.columnEmployeeType = base.Columns["EmployeeType"];
                 this.columnEmailAddress = base.Columns["EmailAddress"];
+                this.columnSalaryType = base.Columns["SalaryType"];
                 this.columnDepartment = base.Columns["Department"];
                 this.columnManagerID = base.Columns["ManagerID"];
+                this.columnPayID = base.Columns["PayID"];
+                this.columnStartDate = base.Columns["StartDate"];
+                this.columnEndDate = base.Columns["EndDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -490,14 +574,28 @@ namespace NewEmployeeDLL {
                 base.Columns.Add(this.columnLastName);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
+                this.columnActive = new global::System.Data.DataColumn("Active", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActive);
+                this.columnEmployeeGroup = new global::System.Data.DataColumn("EmployeeGroup", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeGroup);
                 this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHomeOffice);
+                this.columnEmployeeType = new global::System.Data.DataColumn("EmployeeType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeType);
                 this.columnEmailAddress = new global::System.Data.DataColumn("EmailAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmailAddress);
+                this.columnSalaryType = new global::System.Data.DataColumn("SalaryType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalaryType);
                 this.columnDepartment = new global::System.Data.DataColumn("Department", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDepartment);
                 this.columnManagerID = new global::System.Data.DataColumn("ManagerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnManagerID);
+                this.columnPayID = new global::System.Data.DataColumn("PayID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPayID);
+                this.columnStartDate = new global::System.Data.DataColumn("StartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStartDate);
+                this.columnEndDate = new global::System.Data.DataColumn("EndDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEndDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmployeeID}, true));
                 this.columnEmployeeID.AllowDBNull = false;
@@ -508,36 +606,42 @@ namespace NewEmployeeDLL {
                 this.columnLastName.MaxLength = 2147483647;
                 this.columnPhoneNumber.AllowDBNull = false;
                 this.columnPhoneNumber.MaxLength = 2147483647;
+                this.columnActive.AllowDBNull = false;
+                this.columnEmployeeGroup.AllowDBNull = false;
+                this.columnEmployeeGroup.MaxLength = 2147483647;
                 this.columnHomeOffice.AllowDBNull = false;
                 this.columnHomeOffice.MaxLength = 2147483647;
+                this.columnEmployeeType.AllowDBNull = false;
+                this.columnEmployeeType.MaxLength = 2147483647;
                 this.columnEmailAddress.MaxLength = 2147483647;
+                this.columnSalaryType.MaxLength = 2147483647;
                 this.columnDepartment.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRow NewFindActiveEmployeesRow() {
-                return ((FindActiveEmployeesRow)(this.NewRow()));
+            public FindWarehouseByWarehouseNameRow NewFindWarehouseByWarehouseNameRow() {
+                return ((FindWarehouseByWarehouseNameRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindActiveEmployeesRow(builder);
+                return new FindWarehouseByWarehouseNameRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindActiveEmployeesRow);
+                return typeof(FindWarehouseByWarehouseNameRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindActiveEmployeesRowChanged != null)) {
-                    this.FindActiveEmployeesRowChanged(this, new FindActiveEmployeesRowChangeEvent(((FindActiveEmployeesRow)(e.Row)), e.Action));
+                if ((this.FindWarehouseByWarehouseNameRowChanged != null)) {
+                    this.FindWarehouseByWarehouseNameRowChanged(this, new FindWarehouseByWarehouseNameRowChangeEvent(((FindWarehouseByWarehouseNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -545,8 +649,8 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindActiveEmployeesRowChanging != null)) {
-                    this.FindActiveEmployeesRowChanging(this, new FindActiveEmployeesRowChangeEvent(((FindActiveEmployeesRow)(e.Row)), e.Action));
+                if ((this.FindWarehouseByWarehouseNameRowChanging != null)) {
+                    this.FindWarehouseByWarehouseNameRowChanging(this, new FindWarehouseByWarehouseNameRowChangeEvent(((FindWarehouseByWarehouseNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -554,8 +658,8 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindActiveEmployeesRowDeleted != null)) {
-                    this.FindActiveEmployeesRowDeleted(this, new FindActiveEmployeesRowChangeEvent(((FindActiveEmployeesRow)(e.Row)), e.Action));
+                if ((this.FindWarehouseByWarehouseNameRowDeleted != null)) {
+                    this.FindWarehouseByWarehouseNameRowDeleted(this, new FindWarehouseByWarehouseNameRowChangeEvent(((FindWarehouseByWarehouseNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -563,14 +667,14 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindActiveEmployeesRowDeleting != null)) {
-                    this.FindActiveEmployeesRowDeleting(this, new FindActiveEmployeesRowChangeEvent(((FindActiveEmployeesRow)(e.Row)), e.Action));
+                if ((this.FindWarehouseByWarehouseNameRowDeleting != null)) {
+                    this.FindWarehouseByWarehouseNameRowDeleting(this, new FindWarehouseByWarehouseNameRowChangeEvent(((FindWarehouseByWarehouseNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindActiveEmployeesRow(FindActiveEmployeesRow row) {
+            public void RemoveFindWarehouseByWarehouseNameRow(FindWarehouseByWarehouseNameRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -579,7 +683,7 @@ namespace NewEmployeeDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindActiveEmployeesDataSet ds = new FindActiveEmployeesDataSet();
+                FindWarehouseByWarehouseNameDataSet ds = new FindWarehouseByWarehouseNameDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -597,7 +701,7 @@ namespace NewEmployeeDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindActiveEmployeesDataTable";
+                attribute2.FixedValue = "FindWarehouseByWarehouseNameDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -641,25 +745,25 @@ namespace NewEmployeeDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindActiveEmployeesRow : global::System.Data.DataRow {
+        public partial class FindWarehouseByWarehouseNameRow : global::System.Data.DataRow {
             
-            private FindActiveEmployeesDataTable tableFindActiveEmployees;
+            private FindWarehouseByWarehouseNameDataTable tableFindWarehouseByWarehouseName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindActiveEmployeesRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindWarehouseByWarehouseNameRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindActiveEmployees = ((FindActiveEmployeesDataTable)(this.Table));
+                this.tableFindWarehouseByWarehouseName = ((FindWarehouseByWarehouseNameDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int EmployeeID {
                 get {
-                    return ((int)(this[this.tableFindActiveEmployees.EmployeeIDColumn]));
+                    return ((int)(this[this.tableFindWarehouseByWarehouseName.EmployeeIDColumn]));
                 }
                 set {
-                    this[this.tableFindActiveEmployees.EmployeeIDColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.EmployeeIDColumn] = value;
                 }
             }
             
@@ -667,10 +771,10 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string FirstName {
                 get {
-                    return ((string)(this[this.tableFindActiveEmployees.FirstNameColumn]));
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.FirstNameColumn]));
                 }
                 set {
-                    this[this.tableFindActiveEmployees.FirstNameColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.FirstNameColumn] = value;
                 }
             }
             
@@ -678,10 +782,10 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string LastName {
                 get {
-                    return ((string)(this[this.tableFindActiveEmployees.LastNameColumn]));
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.LastNameColumn]));
                 }
                 set {
-                    this[this.tableFindActiveEmployees.LastNameColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.LastNameColumn] = value;
                 }
             }
             
@@ -689,10 +793,32 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string PhoneNumber {
                 get {
-                    return ((string)(this[this.tableFindActiveEmployees.PhoneNumberColumn]));
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.PhoneNumberColumn]));
                 }
                 set {
-                    this[this.tableFindActiveEmployees.PhoneNumberColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.PhoneNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Active {
+                get {
+                    return ((bool)(this[this.tableFindWarehouseByWarehouseName.ActiveColumn]));
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.ActiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeGroup {
+                get {
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.EmployeeGroupColumn]));
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.EmployeeGroupColumn] = value;
                 }
             }
             
@@ -700,10 +826,21 @@ namespace NewEmployeeDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string HomeOffice {
                 get {
-                    return ((string)(this[this.tableFindActiveEmployees.HomeOfficeColumn]));
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.HomeOfficeColumn]));
                 }
                 set {
-                    this[this.tableFindActiveEmployees.HomeOfficeColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.HomeOfficeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string EmployeeType {
+                get {
+                    return ((string)(this[this.tableFindWarehouseByWarehouseName.EmployeeTypeColumn]));
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.EmployeeTypeColumn] = value;
                 }
             }
             
@@ -712,14 +849,32 @@ namespace NewEmployeeDLL {
             public string EmailAddress {
                 get {
                     try {
-                        return ((string)(this[this.tableFindActiveEmployees.EmailAddressColumn]));
+                        return ((string)(this[this.tableFindWarehouseByWarehouseName.EmailAddressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EmailAddress\' in table \'FindActiveEmployees\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmailAddress\' in table \'FindWarehouseByWarehouseName\' is DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableFindActiveEmployees.EmailAddressColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.EmailAddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SalaryType {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindWarehouseByWarehouseName.SalaryTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SalaryType\' in table \'FindWarehouseByWarehouseName\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.SalaryTypeColumn] = value;
                 }
             }
             
@@ -728,14 +883,15 @@ namespace NewEmployeeDLL {
             public string Department {
                 get {
                     try {
-                        return ((string)(this[this.tableFindActiveEmployees.DepartmentColumn]));
+                        return ((string)(this[this.tableFindWarehouseByWarehouseName.DepartmentColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Department\' in table \'FindActiveEmployees\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Department\' in table \'FindWarehouseByWarehouseName\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableFindActiveEmployees.DepartmentColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.DepartmentColumn] = value;
                 }
             }
             
@@ -744,51 +900,150 @@ namespace NewEmployeeDLL {
             public int ManagerID {
                 get {
                     try {
-                        return ((int)(this[this.tableFindActiveEmployees.ManagerIDColumn]));
+                        return ((int)(this[this.tableFindWarehouseByWarehouseName.ManagerIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'FindActiveEmployees\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'FindWarehouseByWarehouseName\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableFindActiveEmployees.ManagerIDColumn] = value;
+                    this[this.tableFindWarehouseByWarehouseName.ManagerIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PayID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFindWarehouseByWarehouseName.PayIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PayID\' in table \'FindWarehouseByWarehouseName\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.PayIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime StartDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindWarehouseByWarehouseName.StartDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'StartDate\' in table \'FindWarehouseByWarehouseName\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.StartDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime EndDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindWarehouseByWarehouseName.EndDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EndDate\' in table \'FindWarehouseByWarehouseName\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableFindWarehouseByWarehouseName.EndDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEmailAddressNull() {
-                return this.IsNull(this.tableFindActiveEmployees.EmailAddressColumn);
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.EmailAddressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmailAddressNull() {
-                this[this.tableFindActiveEmployees.EmailAddressColumn] = global::System.Convert.DBNull;
+                this[this.tableFindWarehouseByWarehouseName.EmailAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSalaryTypeNull() {
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.SalaryTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSalaryTypeNull() {
+                this[this.tableFindWarehouseByWarehouseName.SalaryTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDepartmentNull() {
-                return this.IsNull(this.tableFindActiveEmployees.DepartmentColumn);
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.DepartmentColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDepartmentNull() {
-                this[this.tableFindActiveEmployees.DepartmentColumn] = global::System.Convert.DBNull;
+                this[this.tableFindWarehouseByWarehouseName.DepartmentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsManagerIDNull() {
-                return this.IsNull(this.tableFindActiveEmployees.ManagerIDColumn);
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.ManagerIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetManagerIDNull() {
-                this[this.tableFindActiveEmployees.ManagerIDColumn] = global::System.Convert.DBNull;
+                this[this.tableFindWarehouseByWarehouseName.ManagerIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPayIDNull() {
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.PayIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPayIDNull() {
+                this[this.tableFindWarehouseByWarehouseName.PayIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStartDateNull() {
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.StartDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStartDateNull() {
+                this[this.tableFindWarehouseByWarehouseName.StartDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEndDateNull() {
+                return this.IsNull(this.tableFindWarehouseByWarehouseName.EndDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEndDateNull() {
+                this[this.tableFindWarehouseByWarehouseName.EndDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -796,22 +1051,22 @@ namespace NewEmployeeDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindActiveEmployeesRowChangeEvent : global::System.EventArgs {
+        public class FindWarehouseByWarehouseNameRowChangeEvent : global::System.EventArgs {
             
-            private FindActiveEmployeesRow eventRow;
+            private FindWarehouseByWarehouseNameRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRowChangeEvent(FindActiveEmployeesRow row, global::System.Data.DataRowAction action) {
+            public FindWarehouseByWarehouseNameRowChangeEvent(FindWarehouseByWarehouseNameRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveEmployeesRow Row {
+            public FindWarehouseByWarehouseNameRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -827,7 +1082,7 @@ namespace NewEmployeeDLL {
         }
     }
 }
-namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
+namespace NewEmployeeDLL.FindWarehouseByWarehouseNameDataSetTableAdapters {
     
     
     /// <summary>
@@ -839,7 +1094,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindActiveEmployeesTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindWarehouseByWarehouseNameTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -853,7 +1108,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindActiveEmployeesTableAdapter() {
+        public FindWarehouseByWarehouseNameTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -950,15 +1205,22 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindActiveEmployees";
+            tableMapping.DataSetTable = "FindWarehouseByWarehouseName";
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
+            tableMapping.ColumnMappings.Add("Active", "Active");
+            tableMapping.ColumnMappings.Add("EmployeeGroup", "EmployeeGroup");
             tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
+            tableMapping.ColumnMappings.Add("EmployeeType", "EmployeeType");
             tableMapping.ColumnMappings.Add("EmailAddress", "EmailAddress");
+            tableMapping.ColumnMappings.Add("SalaryType", "SalaryType");
             tableMapping.ColumnMappings.Add("Department", "Department");
             tableMapping.ColumnMappings.Add("ManagerID", "ManagerID");
+            tableMapping.ColumnMappings.Add("PayID", "PayID");
+            tableMapping.ColumnMappings.Add("StartDate", "StartDate");
+            tableMapping.ColumnMappings.Add("EndDate", "EndDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -975,17 +1237,24 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindActiveEmployees";
+            this._commandCollection[0].CommandText = "dbo.FindWarehouseByWarehouseName";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WarehouseName", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindActiveEmployeesDataSet.FindActiveEmployeesDataTable dataTable) {
+        public virtual int Fill(FindWarehouseByWarehouseNameDataSet.FindWarehouseByWarehouseNameDataTable dataTable, string WarehouseName) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((WarehouseName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(WarehouseName));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -997,9 +1266,15 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindActiveEmployeesDataSet.FindActiveEmployeesDataTable GetData() {
+        public virtual FindWarehouseByWarehouseNameDataSet.FindWarehouseByWarehouseNameDataTable GetData(string WarehouseName) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FindActiveEmployeesDataSet.FindActiveEmployeesDataTable dataTable = new FindActiveEmployeesDataSet.FindActiveEmployeesDataTable();
+            if ((WarehouseName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(WarehouseName));
+            }
+            FindWarehouseByWarehouseNameDataSet.FindWarehouseByWarehouseNameDataTable dataTable = new FindWarehouseByWarehouseNameDataSet.FindWarehouseByWarehouseNameDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1073,7 +1348,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindActiveEmployeesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindWarehouseByWarehouseNameDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1083,7 +1358,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindActiveEmployeesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindWarehouseByWarehouseNameDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1093,7 +1368,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindActiveEmployeesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindWarehouseByWarehouseNameDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1127,7 +1402,7 @@ namespace NewEmployeeDLL.FindActiveEmployeesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindActiveEmployeesDataSet dataSet) {
+        public virtual int UpdateAll(FindWarehouseByWarehouseNameDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

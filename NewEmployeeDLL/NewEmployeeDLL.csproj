@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NewEmployeeDLL</RootNamespace>
     <AssemblyName>NewEmployeeDLL</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -166,6 +167,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWarehouseByWarehouseNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWarehouseByWarehouseNameDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindWarehousesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -494,6 +500,17 @@
     </None>
     <None Include="FindSortedEmployeeManagersDataSet.xss">
       <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWarehouseByWarehouseNameDataSet.xsc">
+      <DependentUpon>FindWarehouseByWarehouseNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWarehouseByWarehouseNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWarehouseByWarehouseNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWarehouseByWarehouseNameDataSet.xss">
+      <DependentUpon>FindWarehouseByWarehouseNameDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWarehousesDataSet.xsc">
       <DependentUpon>FindWarehousesDataSet.xsd</DependentUpon>
