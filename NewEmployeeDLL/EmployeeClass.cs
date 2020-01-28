@@ -121,6 +121,24 @@ namespace NewEmployeeDLL
         FindWarehouseByWarehouseNameDataSet aFindWarehouseByWarehouseNameDataSet;
         FindWarehouseByWarehouseNameDataSetTableAdapters.FindWarehouseByWarehouseNameTableAdapter aFindWarehouseByWarehouseNameTableAdapter;
 
+        FindProductionManagersDataSet aFindProductionManagersDataSet;
+        FindProductionManagersDataSetTableAdapters.FindProductionManagersTableAdapter aFindProductionManagersTableAdapter;
+
+        public FindProductionManagersDataSet FindProductionManagers()
+        {
+            try
+            {
+                aFindProductionManagersDataSet = new FindProductionManagersDataSet();
+                aFindProductionManagersTableAdapter = new FindProductionManagersDataSetTableAdapters.FindProductionManagersTableAdapter();
+                aFindProductionManagersTableAdapter.Fill(aFindProductionManagersDataSet.FindProductionManagers);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Production Managers " + Ex.Message);
+            }
+
+            return aFindProductionManagersDataSet;
+        }
         public FindWarehouseByWarehouseNameDataSet FindWarehouseByWarehouseName(string strWarehouseName)
         {
             try
