@@ -173,6 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindSortedManagersHourlyEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedManagersHourlyEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWarehouseByWarehouseNameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -516,6 +521,17 @@
     </None>
     <None Include="FindSortedEmployeeManagersDataSet.xss">
       <DependentUpon>FindSortedEmployeeManagersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedManagersHourlyEmployeesDataSet.xsc">
+      <DependentUpon>FindSortedManagersHourlyEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedManagersHourlyEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedManagersHourlyEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedManagersHourlyEmployeesDataSet.xss">
+      <DependentUpon>FindSortedManagersHourlyEmployeesDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWarehouseByWarehouseNameDataSet.xsc">
       <DependentUpon>FindWarehouseByWarehouseNameDataSet.xsd</DependentUpon>
