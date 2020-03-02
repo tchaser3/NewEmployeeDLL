@@ -29,6 +29,7 @@
               <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
               <Mapping SourceColumn="EmployeeGroup" DataSetColumn="EmployeeGroup" />
               <Mapping SourceColumn="EmployeeType" DataSetColumn="EmployeeType" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,7 +41,7 @@
   <xs:element name="FindEmployeesForMaterialsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindEmployeesForMaterialsDataSet" msprop:Generator_UserDSName="FindEmployeesForMaterialsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindEmployeesForMaterials" msprop:Generator_TableClassName="FindEmployeesForMaterialsDataTable" msprop:Generator_TableVarName="tableFindEmployeesForMaterials" msprop:Generator_TablePropName="FindEmployeesForMaterials" msprop:Generator_RowDeletingName="FindEmployeesForMaterialsRowDeleting" msprop:Generator_RowChangingName="FindEmployeesForMaterialsRowChanging" msprop:Generator_RowEvHandlerName="FindEmployeesForMaterialsRowChangeEventHandler" msprop:Generator_RowDeletedName="FindEmployeesForMaterialsRowDeleted" msprop:Generator_UserTableName="FindEmployeesForMaterials" msprop:Generator_RowChangedName="FindEmployeesForMaterialsRowChanged" msprop:Generator_RowEvArgName="FindEmployeesForMaterialsRowChangeEvent" msprop:Generator_RowClassName="FindEmployeesForMaterialsRow">
+        <xs:element name="FindEmployeesForMaterials" msprop:Generator_TableClassName="FindEmployeesForMaterialsDataTable" msprop:Generator_TableVarName="tableFindEmployeesForMaterials" msprop:Generator_RowChangedName="FindEmployeesForMaterialsRowChanged" msprop:Generator_TablePropName="FindEmployeesForMaterials" msprop:Generator_RowDeletingName="FindEmployeesForMaterialsRowDeleting" msprop:Generator_RowChangingName="FindEmployeesForMaterialsRowChanging" msprop:Generator_RowEvHandlerName="FindEmployeesForMaterialsRowChangeEventHandler" msprop:Generator_RowDeletedName="FindEmployeesForMaterialsRowDeleted" msprop:Generator_RowClassName="FindEmployeesForMaterialsRow" msprop:Generator_UserTableName="FindEmployeesForMaterials" msprop:Generator_RowEvArgName="FindEmployeesForMaterialsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
@@ -80,6 +81,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="EmployeeType" msprop:Generator_ColumnVarNameInTable="columnEmployeeType" msprop:Generator_ColumnPropNameInRow="EmployeeType" msprop:Generator_ColumnPropNameInTable="EmployeeTypeColumn" msprop:Generator_UserColumnName="EmployeeType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

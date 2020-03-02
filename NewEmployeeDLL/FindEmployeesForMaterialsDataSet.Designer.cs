@@ -293,6 +293,8 @@ namespace NewEmployeeDLL {
             
             private global::System.Data.DataColumn columnEmployeeType;
             
+            private global::System.Data.DataColumn columnFullName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindEmployeesForMaterialsDataTable() {
@@ -384,6 +386,14 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FullNameColumn {
+                get {
+                    return this.columnFullName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindEmployeesForMaterialsRow AddFindEmployeesForMaterialsRow(int EmployeeID, string FirstName, string LastName, string HomeOffice, string PhoneNumber, string EmployeeGroup, string EmployeeType) {
+            public FindEmployeesForMaterialsRow AddFindEmployeesForMaterialsRow(int EmployeeID, string FirstName, string LastName, string HomeOffice, string PhoneNumber, string EmployeeGroup, string EmployeeType, string FullName) {
                 FindEmployeesForMaterialsRow rowFindEmployeesForMaterialsRow = ((FindEmployeesForMaterialsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeID,
@@ -428,7 +438,8 @@ namespace NewEmployeeDLL {
                         HomeOffice,
                         PhoneNumber,
                         EmployeeGroup,
-                        EmployeeType};
+                        EmployeeType,
+                        FullName};
                 rowFindEmployeesForMaterialsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindEmployeesForMaterialsRow);
                 return rowFindEmployeesForMaterialsRow;
@@ -465,6 +476,7 @@ namespace NewEmployeeDLL {
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnEmployeeGroup = base.Columns["EmployeeGroup"];
                 this.columnEmployeeType = base.Columns["EmployeeType"];
+                this.columnFullName = base.Columns["FullName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +496,8 @@ namespace NewEmployeeDLL {
                 base.Columns.Add(this.columnEmployeeGroup);
                 this.columnEmployeeType = new global::System.Data.DataColumn("EmployeeType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeType);
+                this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmployeeID}, true));
                 this.columnEmployeeID.AllowDBNull = false;
@@ -500,6 +514,8 @@ namespace NewEmployeeDLL {
                 this.columnEmployeeGroup.MaxLength = 2147483647;
                 this.columnEmployeeType.AllowDBNull = false;
                 this.columnEmployeeType.MaxLength = 2147483647;
+                this.columnFullName.ReadOnly = true;
+                this.columnFullName.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -716,6 +732,34 @@ namespace NewEmployeeDLL {
                     this[this.tableFindEmployeesForMaterials.EmployeeTypeColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FullName {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindEmployeesForMaterials.FullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FullName\' in table \'FindEmployeesForMaterials\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindEmployeesForMaterials.FullNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFullNameNull() {
+                return this.IsNull(this.tableFindEmployeesForMaterials.FullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFullNameNull() {
+                this[this.tableFindEmployeesForMaterials.FullNameColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -884,6 +928,7 @@ namespace NewEmployeeDLL.FindEmployeesForMaterialsDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("EmployeeGroup", "EmployeeGroup");
             tableMapping.ColumnMappings.Add("EmployeeType", "EmployeeType");
+            tableMapping.ColumnMappings.Add("FullName", "FullName");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
