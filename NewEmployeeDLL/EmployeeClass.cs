@@ -127,6 +127,24 @@ namespace NewEmployeeDLL
         FindSortedManagersHourlyEmployeesDataSet aFindSortedManagersHourlyEmployeesDataSet;
         FindSortedManagersHourlyEmployeesDataSetTableAdapters.FindSortedManagersHourlyEmployeesTableAdapter aFindSortedManagersHourlyEmployeesTableAdapter;
 
+        FindEmployeesForMaterialsDataSet aFindEmployeesForMaterialsDataSet;
+        FindEmployeesForMaterialsDataSetTableAdapters.FindEmployeesForMaterialsTableAdapter aFindEmployeesForMaterialsTableAdapter;
+
+        public FindEmployeesForMaterialsDataSet FindEmployeesForMaterials(string strLastName)
+        {
+            try
+            {
+                aFindEmployeesForMaterialsDataSet = new FindEmployeesForMaterialsDataSet();
+                aFindEmployeesForMaterialsTableAdapter = new FindEmployeesForMaterialsDataSetTableAdapters.FindEmployeesForMaterialsTableAdapter();
+                aFindEmployeesForMaterialsTableAdapter.Fill(aFindEmployeesForMaterialsDataSet.FindEmployeesForMaterials, strLastName);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employees For Materials " + Ex.Message);
+            }
+
+            return aFindEmployeesForMaterialsDataSet;
+        }
         public FindSortedManagersHourlyEmployeesDataSet FindSortedManagersHourlyEmployees(int intManagerID)
         {
             try
