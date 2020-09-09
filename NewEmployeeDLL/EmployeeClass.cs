@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -130,6 +131,42 @@ namespace NewEmployeeDLL
         FindEmployeesForMaterialsDataSet aFindEmployeesForMaterialsDataSet;
         FindEmployeesForMaterialsDataSetTableAdapters.FindEmployeesForMaterialsTableAdapter aFindEmployeesForMaterialsTableAdapter;
 
+        FindEmployeeManagerForLastYearDataSet aFindEmployeeManagerForLastYearDataSet;
+        FindEmployeeManagerForLastYearDataSetTableAdapters.FindEmployeeManagersForLastYearTableAdapter aFindEmployeeManagerForLastYearTableAdapter;
+
+        FindEmployeesForDataEntryForLastYearDataSet aFindEmployeesForDataEntryForLastYearDataSet;
+        FindEmployeesForDataEntryForLastYearDataSetTableAdapters.FindEmployeesForDataEntryForLastYearTableAdapter aFindEmployeesForDataEntryForLastYearTableAdapter;
+
+        public FindEmployeesForDataEntryForLastYearDataSet FindEmployeesForDataEntryForLastYear(DateTime datStartDate, string strLastName)
+        {
+            try
+            {
+                aFindEmployeesForDataEntryForLastYearDataSet = new FindEmployeesForDataEntryForLastYearDataSet();
+                aFindEmployeesForDataEntryForLastYearTableAdapter = new FindEmployeesForDataEntryForLastYearDataSetTableAdapters.FindEmployeesForDataEntryForLastYearTableAdapter();
+                aFindEmployeesForDataEntryForLastYearTableAdapter.Fill(aFindEmployeesForDataEntryForLastYearDataSet.FindEmployeesForDataEntryForLastYear, datStartDate, strLastName);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employees For Data entry For Last Year " + Ex.Message);
+            }
+
+            return aFindEmployeesForDataEntryForLastYearDataSet;
+        }
+        public FindEmployeeManagerForLastYearDataSet FindEmployeeManagerForLastYear(DateTime datStartDate)
+        {
+            try
+            {
+                aFindEmployeeManagerForLastYearDataSet = new FindEmployeeManagerForLastYearDataSet();
+                aFindEmployeeManagerForLastYearTableAdapter = new FindEmployeeManagerForLastYearDataSetTableAdapters.FindEmployeeManagersForLastYearTableAdapter();
+                aFindEmployeeManagerForLastYearTableAdapter.Fill(aFindEmployeeManagerForLastYearDataSet.FindEmployeeManagersForLastYear, datStartDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employee Manager For Last Year " + Ex.Message);
+            }
+
+            return aFindEmployeeManagerForLastYearDataSet;
+        }
         public FindEmployeesForMaterialsDataSet FindEmployeesForMaterials(string strLastName)
         {
             try
