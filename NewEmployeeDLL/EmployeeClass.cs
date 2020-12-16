@@ -137,6 +137,25 @@ namespace NewEmployeeDLL
         FindEmployeesForDataEntryForLastYearDataSet aFindEmployeesForDataEntryForLastYearDataSet;
         FindEmployeesForDataEntryForLastYearDataSetTableAdapters.FindEmployeesForDataEntryForLastYearTableAdapter aFindEmployeesForDataEntryForLastYearTableAdapter;
 
+        FindEmployeeByLastNameEndDateDataSet aFindEmployeeByLastNameEndDateDataSet;
+        FindEmployeeByLastNameEndDateDataSetTableAdapters.FindEmployeesByLastNameEndDateTableAdapter aFindEmployeeByLastNameEndDateTableAdapter;
+
+        public FindEmployeeByLastNameEndDateDataSet FindEmployeeByLastNameEndDate(string strLastName, DateTime datEndDate)
+        {
+            try
+            {
+                aFindEmployeeByLastNameEndDateDataSet = new FindEmployeeByLastNameEndDateDataSet();
+                aFindEmployeeByLastNameEndDateTableAdapter = new FindEmployeeByLastNameEndDateDataSetTableAdapters.FindEmployeesByLastNameEndDateTableAdapter();
+                aFindEmployeeByLastNameEndDateTableAdapter.Fill(aFindEmployeeByLastNameEndDateDataSet.FindEmployeesByLastNameEndDate, strLastName, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "The Employee Class // Find Employee By Last Name End Date " + Ex.Message);
+
+            }
+
+            return aFindEmployeeByLastNameEndDateDataSet;
+        }
         public FindEmployeesForDataEntryForLastYearDataSet FindEmployeesForDataEntryForLastYear(DateTime datStartDate, string strLastName)
         {
             try
