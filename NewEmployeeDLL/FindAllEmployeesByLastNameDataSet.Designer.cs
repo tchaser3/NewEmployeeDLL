@@ -285,6 +285,8 @@ namespace NewEmployeeDLL {
             
             private global::System.Data.DataColumn columnLastName;
             
+            private global::System.Data.DataColumn columnFullName;
+            
             private global::System.Data.DataColumn columnHomeOffice;
             
             private global::System.Data.DataColumn columnPhoneNumber;
@@ -359,6 +361,14 @@ namespace NewEmployeeDLL {
             public global::System.Data.DataColumn LastNameColumn {
                 get {
                     return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FullNameColumn {
+                get {
+                    return this.columnFullName;
                 }
             }
             
@@ -479,12 +489,13 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindAllEmployeeByLastNameRow AddFindAllEmployeeByLastNameRow(int EmployeeID, string FirstName, string LastName, string HomeOffice, string PhoneNumber, string EmployeeGroup, string EmployeeType, bool Active, string EmailAddress, string SalaryType, string Department, int ManagerID, int PayID) {
+            public FindAllEmployeeByLastNameRow AddFindAllEmployeeByLastNameRow(int EmployeeID, string FirstName, string LastName, string FullName, string HomeOffice, string PhoneNumber, string EmployeeGroup, string EmployeeType, bool Active, string EmailAddress, string SalaryType, string Department, int ManagerID, int PayID) {
                 FindAllEmployeeByLastNameRow rowFindAllEmployeeByLastNameRow = ((FindAllEmployeeByLastNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeID,
                         FirstName,
                         LastName,
+                        FullName,
                         HomeOffice,
                         PhoneNumber,
                         EmployeeGroup,
@@ -527,6 +538,7 @@ namespace NewEmployeeDLL {
                 this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
+                this.columnFullName = base.Columns["FullName"];
                 this.columnHomeOffice = base.Columns["HomeOffice"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnEmployeeGroup = base.Columns["EmployeeGroup"];
@@ -548,6 +560,8 @@ namespace NewEmployeeDLL {
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
+                this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFullName);
                 this.columnHomeOffice = new global::System.Data.DataColumn("HomeOffice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHomeOffice);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
@@ -576,6 +590,8 @@ namespace NewEmployeeDLL {
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
                 this.columnLastName.MaxLength = 2147483647;
+                this.columnFullName.ReadOnly = true;
+                this.columnFullName.MaxLength = 2147483647;
                 this.columnHomeOffice.AllowDBNull = false;
                 this.columnHomeOffice.MaxLength = 2147483647;
                 this.columnPhoneNumber.AllowDBNull = false;
@@ -763,6 +779,22 @@ namespace NewEmployeeDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FullName {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindAllEmployeeByLastName.FullNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FullName\' in table \'FindAllEmployeeByLastName\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindAllEmployeeByLastName.FullNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string HomeOffice {
                 get {
                     return ((string)(this[this.tableFindAllEmployeeByLastName.HomeOfficeColumn]));
@@ -897,6 +929,18 @@ namespace NewEmployeeDLL {
                 set {
                     this[this.tableFindAllEmployeeByLastName.PayIDColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFullNameNull() {
+                return this.IsNull(this.tableFindAllEmployeeByLastName.FullNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFullNameNull() {
+                this[this.tableFindAllEmployeeByLastName.FullNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1122,6 +1166,7 @@ namespace NewEmployeeDLL.FindAllEmployeesByLastNameDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("FullName", "FullName");
             tableMapping.ColumnMappings.Add("HomeOffice", "HomeOffice");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("EmployeeGroup", "EmployeeGroup");

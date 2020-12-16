@@ -25,6 +25,7 @@
               <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
               <Mapping SourceColumn="HomeOffice" DataSetColumn="HomeOffice" />
               <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
               <Mapping SourceColumn="EmployeeGroup" DataSetColumn="EmployeeGroup" />
@@ -46,7 +47,7 @@
   <xs:element name="FindAllEmployeesByLastNameDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindAllEmployeesByLastNameDataSet" msprop:Generator_UserDSName="FindAllEmployeesByLastNameDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindAllEmployeeByLastName" msprop:Generator_TableClassName="FindAllEmployeeByLastNameDataTable" msprop:Generator_TableVarName="tableFindAllEmployeeByLastName" msprop:Generator_RowChangedName="FindAllEmployeeByLastNameRowChanged" msprop:Generator_TablePropName="FindAllEmployeeByLastName" msprop:Generator_RowDeletingName="FindAllEmployeeByLastNameRowDeleting" msprop:Generator_RowChangingName="FindAllEmployeeByLastNameRowChanging" msprop:Generator_RowEvHandlerName="FindAllEmployeeByLastNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllEmployeeByLastNameRowDeleted" msprop:Generator_RowClassName="FindAllEmployeeByLastNameRow" msprop:Generator_UserTableName="FindAllEmployeeByLastName" msprop:Generator_RowEvArgName="FindAllEmployeeByLastNameRowChangeEvent">
+        <xs:element name="FindAllEmployeeByLastName" msprop:Generator_TableClassName="FindAllEmployeeByLastNameDataTable" msprop:Generator_TableVarName="tableFindAllEmployeeByLastName" msprop:Generator_TablePropName="FindAllEmployeeByLastName" msprop:Generator_RowDeletingName="FindAllEmployeeByLastNameRowDeleting" msprop:Generator_RowChangingName="FindAllEmployeeByLastNameRowChanging" msprop:Generator_RowEvHandlerName="FindAllEmployeeByLastNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FindAllEmployeeByLastNameRowDeleted" msprop:Generator_UserTableName="FindAllEmployeeByLastName" msprop:Generator_RowChangedName="FindAllEmployeeByLastNameRowChanged" msprop:Generator_RowEvArgName="FindAllEmployeeByLastNameRowChangeEvent" msprop:Generator_RowClassName="FindAllEmployeeByLastNameRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
@@ -58,6 +59,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
