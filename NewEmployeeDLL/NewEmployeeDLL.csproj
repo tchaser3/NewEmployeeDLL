@@ -198,6 +198,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedManagersHourlyEmployeesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindVehicleEmployeeActiveNotMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindVehicleEmployeeActiveNotMatchDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWarehouseByWarehouseNameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -596,6 +601,17 @@
     </None>
     <None Include="FindSortedManagersHourlyEmployeesDataSet.xss">
       <DependentUpon>FindSortedManagersHourlyEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleEmployeeActiveNotMatchDataSet.xsc">
+      <DependentUpon>FindVehicleEmployeeActiveNotMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindVehicleEmployeeActiveNotMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindVehicleEmployeeActiveNotMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindVehicleEmployeeActiveNotMatchDataSet.xss">
+      <DependentUpon>FindVehicleEmployeeActiveNotMatchDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWarehouseByWarehouseNameDataSet.xsc">
       <DependentUpon>FindWarehouseByWarehouseNameDataSet.xsd</DependentUpon>

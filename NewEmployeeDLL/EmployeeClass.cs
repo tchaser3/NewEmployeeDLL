@@ -140,6 +140,24 @@ namespace NewEmployeeDLL
         FindEmployeeByLastNameEndDateDataSet aFindEmployeeByLastNameEndDateDataSet;
         FindEmployeeByLastNameEndDateDataSetTableAdapters.FindEmployeesByLastNameEndDateTableAdapter aFindEmployeeByLastNameEndDateTableAdapter;
 
+        FindVehicleEmployeeActiveNotMatchDataSet aFindVehicleEmployeeActiveNotMatchDataSet;
+        FindVehicleEmployeeActiveNotMatchDataSetTableAdapters.FindVehicleEmployeeActiveNotMatchTableAdapter aFindVehicleEmployeeActiveNotMatchTableAdapter;
+
+        public FindVehicleEmployeeActiveNotMatchDataSet FindVehicleEmployeeActiveNoMatch()
+        {
+            try
+            {
+                aFindVehicleEmployeeActiveNotMatchDataSet = new FindVehicleEmployeeActiveNotMatchDataSet();
+                aFindVehicleEmployeeActiveNotMatchTableAdapter = new FindVehicleEmployeeActiveNotMatchDataSetTableAdapters.FindVehicleEmployeeActiveNotMatchTableAdapter();
+                aFindVehicleEmployeeActiveNotMatchTableAdapter.Fill(aFindVehicleEmployeeActiveNotMatchDataSet.FindVehicleEmployeeActiveNotMatch);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Vehicle Employee Active No Match " + Ex.Message);
+            }
+
+            return aFindVehicleEmployeeActiveNotMatchDataSet;
+        }
         public FindEmployeeByLastNameEndDateDataSet FindEmployeeByLastNameEndDate(string strLastName, DateTime datEndDate)
         {
             try
