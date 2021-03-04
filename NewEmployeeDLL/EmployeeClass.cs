@@ -143,6 +143,24 @@ namespace NewEmployeeDLL
         FindVehicleEmployeeActiveNotMatchDataSet aFindVehicleEmployeeActiveNotMatchDataSet;
         FindVehicleEmployeeActiveNotMatchDataSetTableAdapters.FindVehicleEmployeeActiveNotMatchTableAdapter aFindVehicleEmployeeActiveNotMatchTableAdapter;
 
+        FindManagerEmployeesByPayDateDataSet aFindManagerEmployeesByPayDateDataSet;
+        FindManagerEmployeesByPayDateDataSetTableAdapters.FindManagerEmployeesByPayDateTableAdapter aFindManagerEmployeesByPayDateTableAdapter;
+
+        public FindManagerEmployeesByPayDateDataSet FindManagerEmployeesByPayDate(int intManagerID, DateTime datEndDate)
+        {
+            try
+            {
+                aFindManagerEmployeesByPayDateDataSet = new FindManagerEmployeesByPayDateDataSet();
+                aFindManagerEmployeesByPayDateTableAdapter = new FindManagerEmployeesByPayDateDataSetTableAdapters.FindManagerEmployeesByPayDateTableAdapter();
+                aFindManagerEmployeesByPayDateTableAdapter.Fill(aFindManagerEmployeesByPayDateDataSet.FindManagerEmployeesByPayDate, intManagerID, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Manager Employees By Pay Date " + Ex.Message);
+            }
+
+            return aFindManagerEmployeesByPayDateDataSet;
+        }
         public FindVehicleEmployeeActiveNotMatchDataSet FindVehicleEmployeeActiveNoMatch()
         {
             try

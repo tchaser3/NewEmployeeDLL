@@ -173,6 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindEmployeesForMaterialsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindManagerEmployeesByPayDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindManagerEmployeesByPayDateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindPartsWarehousesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -546,6 +551,17 @@
     </None>
     <None Include="FindEmployeesForMaterialsDataSet.xss">
       <DependentUpon>FindEmployeesForMaterialsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindManagerEmployeesByPayDateDataSet.xsc">
+      <DependentUpon>FindManagerEmployeesByPayDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindManagerEmployeesByPayDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindManagerEmployeesByPayDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindManagerEmployeesByPayDateDataSet.xss">
+      <DependentUpon>FindManagerEmployeesByPayDateDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindPartsWarehousesDataSet.xsc">
       <DependentUpon>FindPartsWarehousesDataSet.xsd</DependentUpon>
