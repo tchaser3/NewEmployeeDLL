@@ -146,6 +146,24 @@ namespace NewEmployeeDLL
         FindManagerEmployeesByPayDateDataSet aFindManagerEmployeesByPayDateDataSet;
         FindManagerEmployeesByPayDateDataSetTableAdapters.FindManagerEmployeesByPayDateTableAdapter aFindManagerEmployeesByPayDateTableAdapter;
 
+        FindEmployeeByLastFourPhoneDigitsDataSet aFindEmployeeByLastFourPhoneDigitsDataSet;
+        FindEmployeeByLastFourPhoneDigitsDataSetTableAdapters.FindEmployeeByLastFourPhoneDigitsTableAdapter aFindEmployeeByLastFourPhoneDigitsTableAdapter;
+        
+        public FindEmployeeByLastFourPhoneDigitsDataSet FindEmployeeByLastFourPhoneDigits(string strLastFour)
+        {
+            try
+            {
+                aFindEmployeeByLastFourPhoneDigitsDataSet = new FindEmployeeByLastFourPhoneDigitsDataSet();
+                aFindEmployeeByLastFourPhoneDigitsTableAdapter = new FindEmployeeByLastFourPhoneDigitsDataSetTableAdapters.FindEmployeeByLastFourPhoneDigitsTableAdapter();
+                aFindEmployeeByLastFourPhoneDigitsTableAdapter.Fill(aFindEmployeeByLastFourPhoneDigitsDataSet.FindEmployeeByLastFourPhoneDigits, strLastFour);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employee By Last Four Phone Digits " + Ex.Message);
+            }
+
+            return aFindEmployeeByLastFourPhoneDigitsDataSet;
+        }
         public FindManagerEmployeesByPayDateDataSet FindManagerEmployeesByPayDate(int intManagerID, DateTime datEndDate)
         {
             try

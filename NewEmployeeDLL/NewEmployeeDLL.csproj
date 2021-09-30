@@ -123,6 +123,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindEmployeeByEmployeeIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindEmployeeByLastFourPhoneDigitsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByLastFourPhoneDigitsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindEmployeeByLastNameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -441,6 +446,17 @@
     </None>
     <None Include="FindEmployeeByEmployeeIDDataSet.xss">
       <DependentUpon>FindEmployeeByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByLastFourPhoneDigitsDataSet.xsc">
+      <DependentUpon>FindEmployeeByLastFourPhoneDigitsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByLastFourPhoneDigitsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByLastFourPhoneDigitsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByLastFourPhoneDigitsDataSet.xss">
+      <DependentUpon>FindEmployeeByLastFourPhoneDigitsDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindEmployeeByLastNameDataSet.xsc">
       <DependentUpon>FindEmployeeByLastNameDataSet.xsd</DependentUpon>
