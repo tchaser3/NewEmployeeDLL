@@ -35,7 +35,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="InsertEmployeeEntry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="InsertEmployeeEntry" msprop:Generator_UserDSName="InsertEmployeeEntry">
+  <xs:element name="InsertEmployeeEntry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="InsertEmployeeEntry" msprop:Generator_DataSetName="InsertEmployeeEntry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>

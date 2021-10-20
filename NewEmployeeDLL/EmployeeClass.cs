@@ -148,7 +148,45 @@ namespace NewEmployeeDLL
 
         FindEmployeeByLastFourPhoneDigitsDataSet aFindEmployeeByLastFourPhoneDigitsDataSet;
         FindEmployeeByLastFourPhoneDigitsDataSetTableAdapters.FindEmployeeByLastFourPhoneDigitsTableAdapter aFindEmployeeByLastFourPhoneDigitsTableAdapter;
-        
+
+        FindEmployeeIsAManagerDataSet aFindEmployeeIsAManagerDataSet;
+        FindEmployeeIsAManagerDataSetTableAdapters.FindEmployeeIsAManagerTableAdapter aFindEmployeeIsAManagerTableAdapter;
+
+        UpdateManagerPositionEntryTableAdapters.QueriesTableAdapter aUpdateManagerPositionTableAdapter;
+
+        public bool UpdateManagerPosition(int intEmployeeID, bool blnIsManager)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateManagerPositionTableAdapter = new UpdateManagerPositionEntryTableAdapters.QueriesTableAdapter();
+                aUpdateManagerPositionTableAdapter.UpdateManagerPosition(intEmployeeID, blnIsManager);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Update Manager Position " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public FindEmployeeIsAManagerDataSet FindEmployeeIsAManager(int intManagerID)
+        {
+            try
+            {
+                aFindEmployeeIsAManagerDataSet = new FindEmployeeIsAManagerDataSet();
+                aFindEmployeeIsAManagerTableAdapter = new FindEmployeeIsAManagerDataSetTableAdapters.FindEmployeeIsAManagerTableAdapter();
+                aFindEmployeeIsAManagerTableAdapter.Fill(aFindEmployeeIsAManagerDataSet.FindEmployeeIsAManager, intManagerID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employee Is A Manager " + Ex.Message);
+            }
+
+            return aFindEmployeeIsAManagerDataSet;
+        }
         public FindEmployeeByLastFourPhoneDigitsDataSet FindEmployeeByLastFourPhoneDigits(string strLastFour)
         {
             try

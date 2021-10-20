@@ -158,6 +158,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindEmployeeGroupByGroupNameDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindEmployeeIsAManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeIsAManagerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindEmployeeManagerForLastYearDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,6 +269,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateEmployeeStartDateEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateManagerPositionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateManagerPositionEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VerifyDesignEmployeeLogonDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -278,6 +288,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VerifyLogonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="whsetracDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>whsetracDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -524,6 +539,17 @@
     <None Include="FindEmployeeGroupByGroupNameDataSet.xss">
       <DependentUpon>FindEmployeeGroupByGroupNameDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindEmployeeIsAManagerDataSet.xsc">
+      <DependentUpon>FindEmployeeIsAManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeIsAManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeIsAManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeIsAManagerDataSet.xss">
+      <DependentUpon>FindEmployeeIsAManagerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindEmployeeManagerForLastYearDataSet.xsc">
       <DependentUpon>FindEmployeeManagerForLastYearDataSet.xsd</DependentUpon>
     </None>
@@ -748,6 +774,17 @@
     <None Include="UpdateEmployeeStartDateEntry.xss">
       <DependentUpon>UpdateEmployeeStartDateEntry.xsd</DependentUpon>
     </None>
+    <None Include="UpdateManagerPositionEntry.xsc">
+      <DependentUpon>UpdateManagerPositionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateManagerPositionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateManagerPositionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateManagerPositionEntry.xss">
+      <DependentUpon>UpdateManagerPositionEntry.xsd</DependentUpon>
+    </None>
     <None Include="VerifyDesignEmployeeLogonDataSet.xsc">
       <DependentUpon>VerifyDesignEmployeeLogonDataSet.xsd</DependentUpon>
     </None>
@@ -780,6 +817,17 @@
     </None>
     <None Include="VerifyLogonDataSet.xss">
       <DependentUpon>VerifyLogonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="whsetracDataSet.xsc">
+      <DependentUpon>whsetracDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="whsetracDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>whsetracDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="whsetracDataSet.xss">
+      <DependentUpon>whsetracDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
