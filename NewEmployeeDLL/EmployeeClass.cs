@@ -154,6 +154,24 @@ namespace NewEmployeeDLL
 
         UpdateManagerPositionEntryTableAdapters.QueriesTableAdapter aUpdateManagerPositionTableAdapter;
 
+        FindEmployeeByPhoneNumberDataSet aFindEmployeeByPhoneNumberDataSet;
+        FindEmployeeByPhoneNumberDataSetTableAdapters.FindEmployeeByPhoneNumberTableAdapter aFindEmployeeByPhoneNumberTableAdapter;
+
+        public FindEmployeeByPhoneNumberDataSet FindEmployeeByPhoneNumber(string strPhoneNumber)
+        {
+            try
+            {
+                aFindEmployeeByPhoneNumberDataSet = new FindEmployeeByPhoneNumberDataSet();
+                aFindEmployeeByPhoneNumberTableAdapter = new FindEmployeeByPhoneNumberDataSetTableAdapters.FindEmployeeByPhoneNumberTableAdapter();
+                aFindEmployeeByPhoneNumberTableAdapter.Fill(aFindEmployeeByPhoneNumberDataSet.FindEmployeeByPhoneNumber, strPhoneNumber);                                                                                                                                        
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Employee Class // Find Employee By Phone Number " + Ex.Message);
+            }
+
+            return aFindEmployeeByPhoneNumberDataSet;
+        }
         public bool UpdateManagerPosition(int intEmployeeID, bool blnIsManager)
         {
             bool blnFatalError = false;

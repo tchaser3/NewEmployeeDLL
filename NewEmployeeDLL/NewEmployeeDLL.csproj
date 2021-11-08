@@ -143,6 +143,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindEmployeeByPayIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindEmployeeByPhoneNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeByPhoneNumberDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindEmployeeEmailAddressDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -505,6 +510,17 @@
     </None>
     <None Include="FindEmployeeByPayIDDataSet.xss">
       <DependentUpon>FindEmployeeByPayIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByPhoneNumberDataSet.xsc">
+      <DependentUpon>FindEmployeeByPhoneNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeByPhoneNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeByPhoneNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeByPhoneNumberDataSet.xss">
+      <DependentUpon>FindEmployeeByPhoneNumberDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindEmployeeEmailAddressDataSet.xsc">
       <DependentUpon>FindEmployeeEmailAddressDataSet.xsd</DependentUpon>
